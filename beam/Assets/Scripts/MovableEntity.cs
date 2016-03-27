@@ -78,7 +78,6 @@ namespace Assets.Scripts
 			{
 				this.transform.position = new Vector2(6.079f, transform.position.y);
 			}
-			this.IsAffectedByGravity = true;
-        }
+		}
 	}
 }

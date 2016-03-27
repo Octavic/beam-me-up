@@ -8,15 +8,5 @@ namespace Assets.Scripts
 {
 	public class Weight : MovableEntity
 	{
-		void Start()
-		{
-			this.IsToggledAndActive = true;
-			int i = 0;
-		}
-
-		void FixedUpdate()
-		{
-			base._Update();
-		}
 	}
 }

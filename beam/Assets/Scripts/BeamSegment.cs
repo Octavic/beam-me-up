@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private static float _horizontalForce;
 
 		// power factor
-		private static float _powerFactor = 0.2f;
+		private static float _powerFactor = 0.8f;
 		
         // A list of entities trapped in the beam
         private IList<MovableEntity> _trappedEntityList;
@@ -98,12 +98,10 @@ namespace Assets.Scripts
 						continue;
 					}
 					this._trappedEntityList.Add(hit.transform.GetComponent<Player>());
-					hit.transform.GetComponent<Player>().IsAffectedByGravity = false;
-                }
+				}
 				else if (hitTag == "Weight")
 				{
 					this._trappedEntityList.Add(hit.transform.GetComponent<Weight>());
-					hit.transform.GetComponent<Weight>().IsAffectedByGravity = false;
 				}
 				else if (hitTag == "Solid")
 				{
@@ -127,8 +125,7 @@ namespace Assets.Scripts
                 foreach (var trapped in _trappedEntityList)
                 {
                     trapped.UpdateVelocity(new Vector2(Mathf.Sign(this.transform.position.x - trapped.transform.position.x) * _horizontalForce, -1 * _gravityForce));
-					//trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
-					trapped.transform.Translate(positionOffset);
+                    trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
                 }
 			}
 			else if (_direction == Direction.Down)
@@ -137,9 +134,8 @@ namespace Assets.Scripts
                 foreach (var trapped in _trappedEntityList)
                 {
                     trapped.UpdateVelocity(new Vector2(Mathf.Sign(this.transform.position.x - trapped.transform.position.x) * _horizontalForce, -1 * _gravityForce));
-					//trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
-					trapped.transform.Translate(positionOffset);
-				}
+                    trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
+                }
             }
 			else if (_direction == Direction.Left)
 			{
@@ -148,15 +144,14 @@ namespace Assets.Scripts
                 {
                     if(this.transform.position.y - trapped.transform.position.y <= 0)
                     {
-                        trapped.UpdateVelocity(new Vector2(0 , -1 * _gravityForce));
+                        trapped.UpdateVelocity(new Vector2(0 , -1 * _gravityForce + _verticalForce));
                     }
                     else
                     {
                         trapped.UpdateVelocity(new Vector2(0, 0));
                     }
-					//trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
-					trapped.transform.Translate(positionOffset);
-				}
+                    trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
+                }
             }
 			else // Direction.Right
 			{
@@ -165,15 +160,14 @@ namespace Assets.Scripts
                 {
                     if (this.transform.position.y - trapped.transform.position.y <= 0)
                     {
-                        trapped.UpdateVelocity(new Vector2(0, -1 * _gravityForce));
+                        trapped.UpdateVelocity(new Vector2(0, -1 * _gravityForce + _verticalForce));
                     }
                     else
                     {
                         trapped.UpdateVelocity(new Vector2(0, 0));
                     }
-					//trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
-					trapped.transform.Translate(positionOffset);
-				}
+                    trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
+                }
             }
 
 			this.transform.localScale = new Vector3(transform.localScale.x, length, transform.localScale.z);
