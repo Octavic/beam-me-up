@@ -8,8 +8,13 @@ namespace Assets.Scripts
 {
 	public class BeamSegment : MonoBehaviour
 	{
-		// A list of entities trapped in the beam
-		private IList<MovableEntity> _trappedEntityList;
+        // How powerfully the beam pulls you towards itself.
+        private static float _gravityForce;
+        private static float _verticalForce;
+        private static float _horizontalForce;
+
+        // A list of entities trapped in the beam
+        private IList<MovableEntity> _trappedEntityList;
 
 		// The position in the previous frame
 		private Vector2 _previousPosition;
@@ -17,6 +22,7 @@ namespace Assets.Scripts
 		// The direction
 		private Direction _direction;
 		private Vector2 _vectorDirection;
+
 
 		public enum Direction
 		{
@@ -27,8 +33,12 @@ namespace Assets.Scripts
 		}
 		
 		// Initialize the beam
-		public void InitializeBeam(Direction d)
+		public void InitializeBeam(Direction d, Vector2 playerPosition)
 		{
+            _gravityForce = GameObject.FindWithTag("Player").GetComponent<Player>().GravityConstant;
+            _verticalForce = GameObject.FindWithTag("Player").GetComponent<Player>().VerticalForce;
+            _horizontalForce = GameObject.FindWithTag("Player").GetComponent<Player>().HorizontalForce;
+            this._previousPosition = playerPosition;
 			this._trappedEntityList = new List<MovableEntity>();
 			this._direction = d;
 			_vectorDirection = new Vector2(-1,0);
@@ -60,6 +70,7 @@ namespace Assets.Scripts
 		// Update the beam to match the correct length and player
 		public void UpdateBeam(Vector2 playerPosition)
 		{
+            var positionOffset = playerPosition - _previousPosition;
 			var hits = Physics2D.RaycastAll(playerPosition, _vectorDirection);
 			this.transform.position = playerPosition;
 			float length = 23;
@@ -104,24 +115,60 @@ namespace Assets.Scripts
 					break;
 				}
 			}
-			if (_direction == Direction.Up)
-			{
-				this.transform.Translate(new Vector3(0, length * 0.16f, 0));
+            if (_direction == Direction.Up)
+            {
+                this.transform.Translate(new Vector3(0, length * 0.16f, 0));
+                foreach (var trapped in _trappedEntityList)
+                {
+                    trapped.UpdateVelocity(new Vector2(Mathf.Sign(this.transform.position.x - trapped.transform.position.x) * _horizontalForce, -1 * _gravityForce));
+                    trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
+                }
 			}
 			else if (_direction == Direction.Down)
 			{
 				this.transform.Translate(new Vector3(0, -length * 0.16f, 0));
+                foreach (var trapped in _trappedEntityList)
+                {
+                    trapped.UpdateVelocity(new Vector2(Mathf.Sign(this.transform.position.x - trapped.transform.position.x) * _horizontalForce, -1 * _gravityForce));
+                    trapped.transform.Translate(new Vector3(0, positionOffset.y, 0));
+                }
             }
 			else if (_direction == Direction.Left)
 			{
 				this.transform.Translate(new Vector3(0, length * 0.16f, 0));
-			}
-			else
+                foreach (var trapped in _trappedEntityList)
+                {
+                    if(this.transform.position.y - trapped.transform.position.y <= 0)
+                    {
+                        trapped.UpdateVelocity(new Vector2(0 , -1 * _gravityForce + _verticalForce));
+                    }
+                    else
+                    {
+                        trapped.UpdateVelocity(new Vector2(0, 0));
+                    }
+                    trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
+                }
+            }
+			else // Direction.Right
 			{
 				this.transform.Translate(new Vector3(0, -length * 0.16f, 0));
+                foreach (var trapped in _trappedEntityList)
+                {
+                    if (this.transform.position.y - trapped.transform.position.y <= 0)
+                    {
+                        trapped.UpdateVelocity(new Vector2(0, -1 * _gravityForce + _verticalForce));
+                    }
+                    else
+                    {
+                        trapped.UpdateVelocity(new Vector2(0, 0));
+                    }
+                    trapped.transform.Translate(new Vector3(0, positionOffset.x, 0));
+                }
             }
 
 			this.transform.localScale = new Vector3(transform.localScale.x, length, transform.localScale.z);
-		}
-	}
+            // Update beam's previous position
+            _previousPosition = playerPosition;
+        }
+    }
 }

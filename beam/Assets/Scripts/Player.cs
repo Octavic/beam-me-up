@@ -113,28 +113,28 @@ namespace Assets.Scripts
 					var newBeam = Instantiate(BeamBase);
 					newBeam.AddComponent<BeamSegment>();
 					var newBeamClass = newBeam.GetComponent<BeamSegment>();
-					newBeamClass.InitializeBeam(BeamSegment.Direction.Up);
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Up, this.transform.position);
 					this._beamList.Add(newBeamClass);
 
 					// Add the downwards beam
 					newBeam = Instantiate(BeamBase);
 					newBeam.AddComponent<BeamSegment>();
 					newBeamClass = newBeam.GetComponent<BeamSegment>();
-					newBeamClass.InitializeBeam(BeamSegment.Direction.Down);
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Down, this.transform.position);
 					this._beamList.Add(newBeamClass);
 
 					// Add the left beam
 					newBeam = Instantiate(BeamBase);
 					newBeam.AddComponent<BeamSegment>();
 					newBeamClass = newBeam.GetComponent<BeamSegment>();
-					newBeamClass.InitializeBeam(BeamSegment.Direction.Left);
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Left, this.transform.position);
 					this._beamList.Add(newBeamClass);
 
 					// Add the right beam
 					newBeam = Instantiate(BeamBase);
 					newBeam.AddComponent<BeamSegment>();
 					newBeamClass = newBeam.GetComponent<BeamSegment>();
-					newBeamClass.InitializeBeam(BeamSegment.Direction.Right);
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Right, this.transform.position);
 					this._beamList.Add(newBeamClass);
 				}
 				else
