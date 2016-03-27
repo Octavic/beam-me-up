@@ -9,33 +9,16 @@ namespace Assets.Scripts
 	public abstract class MovableEntity : SolidEntity
 	{
 		// Gravity constant
-		private static float GravityConstant = 0.1f;
+		public float GravityConstant;
 
-		// Total states of the entity
-		public enum EntityState
+		// If the entity is affected by gravity
+		public bool IsAffectedByGravity
 		{
-			OnGround,
-			Airborne,
-			InBeam
+			get; set;
 		}
 
-		// The current state of the entity
-		public EntityState CurrentState{get; set;}
-
-		// The combined force that's currently affecting the object
-		private Vector2 _force;
-		// The current velocity of the object
-		private Vector2 _velocity;
-
-		// Reset the current x and y velocity
-		public void ResetXVelocity()
-		{
-			this._velocity.x = 0;
-		}
-		public void ResetYVelocity()
-		{
-			this._velocity.y = 0;
-		}
+		// The current velocity
+		protected Vector2 _velocity;
 
 		// Move the entity
 		public void Move(Vector2 offset)
@@ -44,22 +27,57 @@ namespace Assets.Scripts
 		}
 		public void MoveTo(Vector2 targetPosition)
 		{
-			this.Move(targetPosition - new Vector2(this.transform.position.x, this.transform.position.y));
+			this.transform.position = targetPosition;
 		}
 
-		// When updating, move the block based on the velocity
-		void Update()
+		// Update the velocity with offset
+		public void UpdateVelocityX(float xOffset)
 		{
-			// Reset the force
-			this._force = new Vector2(0, 0);
-			// If the object is in air, add gravity
-			if (this.CurrentState == EntityState.Airborne)
-			{
-				this._force += new Vector2(0, GravityConstant);
-            }
+			this._velocity.x += xOffset;
+		}
+		public void UpdateVelocityY(float yOffset)
+		{
+			this._velocity.y += yOffset;
+		}
+		public void UpdateVelocity(Vector2 offset)
+		{
+			this._velocity += offset;
+		}
+		public void ResetVelocityX(float target = 0)
+		{
+			this._velocity.x = target;
+		}
+		public void ResetVelocityY(float target = 0)
+		{
+			this._velocity.y = target;
+		}
+		// Get the current x or y velocity
+		public float GetVelocityX()
+		{
+			return this._velocity.x;
+		}
+		public float GetVelocityY()
+		{
+			return this._velocity.y;
+		}
 
-			this._velocity += _force;
+		// Update
+		protected void _Update()
+		{
+			if (this.IsAffectedByGravity)
+			{
+				this.UpdateVelocityY(GravityConstant);
+			}
 			this.transform.Translate(_velocity);
+
+			if (this.transform.position.x < 0)
+			{
+				this.transform.position = new Vector2(0.001f, transform.position.y);
+			}
+			else if (this.transform.position.x > 6.08f)
+			{
+				this.transform.position = new Vector2(6.079f, transform.position.y);
+			}
 		}
 	}
 }

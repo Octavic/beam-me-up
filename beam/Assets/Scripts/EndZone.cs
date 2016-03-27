@@ -17,7 +17,7 @@ namespace Assets.Scripts
 		public bool IsFinished {  get; private set; }
 
 		// On collision enter, if it's a palyer, then it's finished
-		void OnCollisionEnter2D(Collision2D sender)
+		void OnTriggerEnter2D(Collider2D sender)
 		{
 			if (sender.transform.tag == "Player")
 			{
@@ -25,7 +25,7 @@ namespace Assets.Scripts
 			}
 		}
 		// On collision leave, if it's a palyer, then it's not finished
-		void OnCollisionExit2D(Collision2D sender)
+		void OnTriggerExit2D(Collider2D sender)
 		{
 			if (sender.transform.tag == "Player")
 			{

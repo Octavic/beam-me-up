@@ -8,65 +8,93 @@ namespace Assets.Scripts
 {
 	public abstract class SolidEntity : ScreenEntity
 	{
-		public SolidEntity()
+		// If the entity is toggled on or off
+		[HideInInspector]
+		public bool IsToggledAndActive
 		{
-
+			get; set;
 		}
-		void OnCollisionEnter2D(Collision2D sender)
-		{
-			var senderTag = sender.transform.tag;
-			// If the sender is a beam segment, stop it
-			if (senderTag == "Beam")
-			{
-				sender.transform.GetComponent<BeamSegment>().StopBeam(this.transform.position);
-				return;
-			}
-			MovableEntity movableEntity = null;
 
-			// If the sender is movable, bounce it back to original position;
+		// Set the toggle state
+		public void SetToggleState(bool state)
+		{
+			this.IsToggledAndActive = state;
+		}
+		// Toggle the toggle state
+		public abstract void Toggle();
+
+		// When an item collides against it
+		void OnTriggerEnter2D(Collider2D sender)
+		{
+			// If inactive, don't return anything
+			//if (!IsToggledAndActive)
+			//{
+			//	return;
+			//}
+			// Get the tag of the sender
+			var senderTag = sender.tag;
+			// Get the corresponding sender class
+			MovableEntity senderClass = null;
 			if (senderTag == "Player")
 			{
-				movableEntity = sender.transform.GetComponent<Player>();
+				senderClass = sender.GetComponent<Player>();
 			}
 			else if (senderTag == "Weight")
 			{
-				movableEntity = sender.transform.GetComponent<Weight>();
-			}
-
-			// Get the coordiantes for both entities
-			var movableEntityX = movableEntity.transform.position.x;
-			var movableEntityY = movableEntity.transform.position.y;
-			var thisX = this.transform.position.x;
-			var thisY = this.transform.position.y;
-			// Get how much is differed
-			var xDiff = movableEntityX - thisX;
-			var yDiff = movableEntityY - thisY;
-
-			// If the y different is bigger, reset it to the corresponding Y position
-			if (Math.Abs(yDiff) >= Math.Abs(xDiff))
-			{
-				movableEntity.ResetYVelocity();
-				if (yDiff > 0)
-				{
-					movableEntity.MoveTo(new Vector2(movableEntityX, thisY + 0.32f));
-				}
-				else
-				{
-					movableEntity.MoveTo(new Vector2(movableEntityX, thisY - 0.32f));
-				}
+				senderClass = sender.GetComponent<Weight>();
 			}
 			else
 			{
-				movableEntity.ResetXVelocity();
-				if (xDiff > 0)
-				{
-					movableEntity.MoveTo(new Vector2(thisX + 0.32f, movableEntityY));
-				}
-				else
-				{
-					movableEntity.MoveTo(new Vector2(thisX - 0.32f, movableEntityY));
-				}
+				return;
 			}
-        }
-    }
+
+			senderClass.IsAffectedByGravity = false;
+
+			// Get the position of sender
+			var senderX = sender.transform.position.x;
+			var senderY = sender.transform.position.y;
+			// Get the offset
+			var offsetX = senderX - this.transform.position.x;
+			var offsetY = senderY - this.transform.position.y;
+
+			if (Math.Abs(offsetX) -0.02 < Math.Abs(offsetY))
+			{
+				// Vertical collision
+				senderClass.ResetVelocityY();
+				senderClass.MoveTo(new Vector2(senderX, this.transform.position.y + (offsetY > 0 ? 0.31f : -0.31f)));
+			}
+			else
+			{
+				senderClass.ResetVelocityX();
+				senderClass.MoveTo(new Vector2(this.transform.position.x + (offsetX > 0 ? 0.31f : -0.31f), senderY));
+			}
+		}
+		// When the collider stays
+		void OnTriggerStay2D(Collider2D sender)
+		{
+			this.OnTriggerEnter2D(sender);
+		}
+		// When the collider leaves
+		void OnTriggerExit2D(Collider2D sender)
+		{
+			// Get the tag of the sender
+			var senderTag = sender.tag;
+			// Get the corresponding sender class
+			MovableEntity senderClass = null;
+			if (senderTag == "Player")
+			{
+				senderClass = sender.GetComponent<Player>();
+			}
+			else if (senderTag == "Weight")
+			{
+				senderClass = sender.GetComponent<Weight>();
+			}
+			else
+			{
+				return;
+			}
+
+			senderClass.IsAffectedByGravity = true;
+		}
+	}
 }

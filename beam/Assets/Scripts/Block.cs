@@ -8,8 +8,9 @@ namespace Assets.Scripts
 {
 	public class Block : SolidEntity
 	{
-		public Block()
+		public override void Toggle()
 		{
+			throw new NotImplementedException();
 		}
 	}
 }

@@ -13,12 +13,12 @@ namespace Assets.Scripts
 		// List of all sprites
 		public List<Sprite> SpriteList;
 
+		// The players
+		public GameObject _player1;
+		public GameObject _player2;
+
 		// A list of all collidables on the screen
 		private IDictionary<Vector2, Collidable> _collidableList;
-
-		// The players
-		private Player _player1;
-		private Player _player2;
 
 		// The title of the level
 		private string _levelTitle;
@@ -87,6 +87,7 @@ namespace Assets.Scripts
 							newGameObject.AddComponent<Block>();
 							newGameObjectClass = newGameObject.GetComponent<Block>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
+							
                             break;
 						}
 					case 2:
@@ -119,7 +120,7 @@ namespace Assets.Scripts
 		// Use this for initialization
 		void Start()
 		{
-			this.GenerateLevel("Assets\\Levels\\Test.txt");
+			this.GenerateLevel("Assets\\Levels\\Level1.txt");
 		}
 
 		// Update is called once per frame
