@@ -27,6 +27,7 @@ namespace Assets.Scripts
 		public int MaxJumpFrames;
 		// Friction
 		public float HorizontalFriction;
+		public float VerticalFriction;
 
 		// Beam base
 		public GameObject BeamBase;
@@ -104,11 +105,31 @@ namespace Assets.Scripts
 				this.ResetVelocityY(currentVelocityy > 0 ? MaxVerticalMovementSpeed : -MaxVerticalMovementSpeed);
 			}
 			// Apply friction
-			this.UpdateVelocityX(currentVelocityx > 0 ? -HorizontalFriction : HorizontalFriction);
+			if (Math.Abs(currentVelocityx) >= HorizontalFriction)
+			{
+				this.UpdateVelocityX(currentVelocityx > 0 ? -HorizontalFriction : HorizontalFriction);
+			}
+			else
+			{
+				this.UpdateVelocityX(currentVelocityx);
+            }
+			// Apply friction
+			if (Math.Abs(currentVelocityy) >= VerticalFriction)
+			{
+				this.UpdateVelocityX(currentVelocityy > 0 ? -VerticalFriction : VerticalFriction);
+			}
+			else
+			{
+				this.UpdateVelocityY(currentVelocityy);
+			}
+
 
 			// Update the velocity onto the object
 			base._Update();
+		}
 
+		void Update()
+		{
 			// Emit the beam if the key is pressed
 			if (Input.GetKeyDown(Fire))
 			{
@@ -150,7 +171,7 @@ namespace Assets.Scripts
 					}
 					this._beamList = new List<BeamSegment>();
 				}
-            }
+			}
 
 			foreach (var beam in this._beamList)
 			{

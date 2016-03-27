@@ -24,6 +24,9 @@ namespace Assets.Scripts
 		// Button base
 		public GameObject ButtonBase;
 
+		// Weight base
+		public GameObject WeightBase;
+
 		// A list of all collidables on the screen
 		private IDictionary<Vector2, Collidable> _collidableList;
 
@@ -59,13 +62,27 @@ namespace Assets.Scripts
 			// Read the title
 			this._levelTitle = fileReader.ReadLine();
 
-			// Read the players
+			// Read the players spawn location
 			var line = fileReader.ReadLine();
-			line = fileReader.ReadLine();
+			var playerX = int.Parse(line.Split(',')[0]);
+			var playerY = int.Parse(line.Split(',')[1]);
+			Player1.transform.position = TileCoordinate.TranslateToUnity(new Vector2(playerX, playerY));
 
+			line = fileReader.ReadLine();
+			playerX = int.Parse(line.Split(',')[0]);
+			playerY = int.Parse(line.Split(',')[1]);
+			Player2.transform.position = TileCoordinate.TranslateToUnity(new Vector2(playerX, playerY));
+
+			line = fileReader.ReadLine();
 			// Read the weight locations
 			while (line[0] != '-')
 			{
+				var weightX= int.Parse(line.Split(',')[0]);
+				var weightY= int.Parse(line.Split(',')[1]);
+				var weightGameObject = Instantiate(WeightBase);
+				weightGameObject.AddComponent<Weight>();
+				var weightClass = weightGameObject.GetComponent<Weight>();
+				weightClass.Initialize(new Vector2(weightX, weightY), this.SpriteList[16]);
 				line = fileReader.ReadLine();
 			}
 
