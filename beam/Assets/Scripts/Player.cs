@@ -32,6 +32,9 @@ namespace Assets.Scripts
 		// Beam base
 		public GameObject BeamBase;
 
+        // Firing
+        public bool firing = false;
+
 		// The control scheme for the player
 		public KeyCode Up;
 		public KeyCode Down;
@@ -49,12 +52,15 @@ namespace Assets.Scripts
 		// How many frames have passed in the previous jump
 		private int _jumpFramesHeld;
 
+        private Animator animator;
+
 		// Initialize
 		void Start()
 		{
 			this._beamList = new List<BeamSegment>();
 			this.IsInEndZone = false;
 			this.IsAffectedByGravity = true;
+            animator = this.GetComponent<Animator>();
 		}
 
 		// Reset the jump frames
@@ -81,7 +87,7 @@ namespace Assets.Scripts
 					this._jumpFramesHeld += MaxJumpFrames;
 				}
 			}
-			if (Input.GetKey(Down))
+            if (Input.GetKey(Down))
 			{
 				UpdateVelocityY(-VerticalForce);
 			}
@@ -133,7 +139,9 @@ namespace Assets.Scripts
 			// Emit the beam if the key is pressed
 			if (Input.GetKeyDown(Fire))
 			{
-				if (this._beamList.Count == 0)
+                animator.SetBool("Firing", !firing);
+                firing = !firing;
+                if (this._beamList.Count == 0)
 				{
 					// Add the upwards beam
 					var newBeam = Instantiate(BeamBase);
