@@ -22,6 +22,7 @@ namespace Assets.Scripts
 		public float HorizontalForce;
 		// Max movement speed
 		public float MaxHorizontalMovementSpeed;
+		public float MaxVerticalMovementSpeed;
 		// Max jump frames
 		public int MaxJumpFrames;
 		// Friction
@@ -62,7 +63,7 @@ namespace Assets.Scripts
 		}
 
 		// Update
-		void Update()
+		void FixedUpdate()
 		{
 			if (Input.GetKey(Up))
 			{
@@ -101,7 +102,15 @@ namespace Assets.Scripts
 			{
 				this.ResetVelocityX(currentVelocityx > 0 ? MaxHorizontalMovementSpeed : -MaxHorizontalMovementSpeed);
 			}
+			var currentVelocityy = GetVelocityY();
+			if (Math.Abs(currentVelocityy) > MaxVerticalMovementSpeed)
+			{
+				this.ResetVelocityY(currentVelocityy > 0 ? MaxVerticalMovementSpeed : -MaxVerticalMovementSpeed);
+			}
+			// Apply friction
 			this.UpdateVelocityX(currentVelocityx > 0 ? -HorizontalFriction : HorizontalFriction);
+
+			// Update the velocity onto the object
 			base._Update();
 
 			// Emit the beam if the key is pressed

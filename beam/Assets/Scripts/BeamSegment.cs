@@ -13,6 +13,9 @@ namespace Assets.Scripts
         private static float _verticalForce;
         private static float _horizontalForce;
 
+		// power factor
+		private static float _powerFactor = 0.8f;
+		
         // A list of entities trapped in the beam
         private IList<MovableEntity> _trappedEntityList;
 
@@ -36,8 +39,8 @@ namespace Assets.Scripts
 		public void InitializeBeam(Direction d, Vector2 playerPosition)
 		{
             _gravityForce = GameObject.FindWithTag("Player").GetComponent<Player>().GravityConstant;
-            _verticalForce = GameObject.FindWithTag("Player").GetComponent<Player>().VerticalForce;
-            _horizontalForce = GameObject.FindWithTag("Player").GetComponent<Player>().HorizontalForce;
+            _verticalForce = GameObject.FindWithTag("Player").GetComponent<Player>().VerticalForce * _powerFactor;
+            _horizontalForce = GameObject.FindWithTag("Player").GetComponent<Player>().HorizontalForce * _powerFactor;
             this._previousPosition = playerPosition;
 			this._trappedEntityList = new List<MovableEntity>();
 			this._direction = d;
@@ -70,6 +73,7 @@ namespace Assets.Scripts
 		// Update the beam to match the correct length and player
 		public void UpdateBeam(Vector2 playerPosition)
 		{
+			this._trappedEntityList = new List<MovableEntity>();
             var positionOffset = playerPosition - _previousPosition;
 			var hits = Physics2D.RaycastAll(playerPosition, _vectorDirection);
 			this.transform.position = playerPosition;

@@ -27,6 +27,12 @@ namespace Assets.Scripts
 		// The title of the level
 		private string _levelTitle;
 
+		// Reset the level
+		public void ResetLevel()
+		{
+
+		}
+
 		// Generate the level based on the given file
 		public void GenerateLevel(string levelDataPath)
 		{
