@@ -105,7 +105,7 @@ namespace Assets.Scripts
 			base._Update();
 
 			// Emit the beam if the key is pressed
-			if (Input.GetKey(Fire))
+			if (Input.GetKeyDown(Fire))
 			{
 				if (this._beamList.Count == 0)
 				{
@@ -136,6 +136,14 @@ namespace Assets.Scripts
 					newBeamClass = newBeam.GetComponent<BeamSegment>();
 					newBeamClass.InitializeBeam(BeamSegment.Direction.Right);
 					this._beamList.Add(newBeamClass);
+				}
+				else
+				{
+					foreach (var beam in this._beamList)
+					{
+						Destroy(beam.gameObject);
+					}
+					this._beamList = new List<BeamSegment>();
 				}
             }
 

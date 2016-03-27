@@ -99,7 +99,7 @@ namespace Assets.Scripts
 					{
 						distance = Math.Abs(hit.transform.position.x - this.transform.position.x);
 					}
-					// distance *= 0.32f;
+					distance /= 0.32f;
 					length = distance;
 					break;
 				}
@@ -114,11 +114,11 @@ namespace Assets.Scripts
             }
 			else if (_direction == Direction.Left)
 			{
-				this.transform.Translate(new Vector3(0, -length * 0.16f, 0));
+				this.transform.Translate(new Vector3(0, length * 0.16f, 0));
 			}
 			else
 			{
-				this.transform.Translate(new Vector3(0, length * 0.16f, 0));
+				this.transform.Translate(new Vector3(0, -length * 0.16f, 0));
             }
 
 			this.transform.localScale = new Vector3(transform.localScale.x, length, transform.localScale.z);

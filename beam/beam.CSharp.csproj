@@ -85,12 +85,16 @@
     <None Include="Assets\Levels\example.txt" />
     <None Include="Assets\Levels\format for levels.txt" />
     <None Include="Assets\Levels\level1.txt" />
+    <None Include="Assets\Levels\level10.txt" />
     <None Include="Assets\Levels\level2.txt" />
     <None Include="Assets\Levels\level3.txt" />
     <None Include="Assets\Levels\level4.txt" />
     <None Include="Assets\Levels\level5.txt" />
     <None Include="Assets\Levels\level6.txt" />
     <None Include="Assets\Levels\level7.txt" />
+    <None Include="Assets\Levels\level8.txt" />
+    <None Include="Assets\Levels\level9.txt" />
+    <None Include="Assets\Levels\testlevel.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

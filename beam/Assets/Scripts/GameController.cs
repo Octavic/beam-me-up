@@ -136,7 +136,7 @@ namespace Assets.Scripts
 		// Use this for initialization
 		void Start()
 		{
-			this.GenerateLevel("Assets\\Levels\\Level1.txt");
+			this.GenerateLevel("Assets\\Levels\\testlevel.txt");
 		}
 
 		// Update is called once per frame
