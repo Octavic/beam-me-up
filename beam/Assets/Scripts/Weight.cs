@@ -8,9 +8,5 @@ namespace Assets.Scripts
 {
 	public class Weight : MovableEntity
 	{
-		public override void Toggle()
-		{
-			throw new NotImplementedException();
-		}
 	}
 }

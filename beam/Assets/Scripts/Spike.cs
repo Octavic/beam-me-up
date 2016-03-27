@@ -8,13 +8,12 @@ namespace Assets.Scripts
 {
 	public class Spike : SolidEntity
 	{
-		public override void Toggle()
-		{
-			throw new NotImplementedException();
-		}
-
 		void OnTriggerEnter2D(Collider2D sender)
 		{
+			if (!this.IsToggledAndActive)
+			{
+				return;
+			}
 			// Get the tag of the sender
 			var senderTag = sender.tag;
 			if (senderTag == "Player" || senderTag == "Weight")

@@ -21,6 +21,9 @@ namespace Assets.Scripts
 		public GameObject HorizontalSpikes;
 		public GameObject VerticalSpikes;
 
+		// Button base
+		public GameObject ButtonBase;
+
 		// A list of all collidables on the screen
 		private IDictionary<Vector2, Collidable> _collidableList;
 
@@ -85,7 +88,7 @@ namespace Assets.Scripts
 				}
 
 				// Split the line and get the position
-				var splitLine = line.Split(new char[] { ',',':','{','}'});
+				var splitLine = line.Split(new char[] { ',',':','{','}'},System.StringSplitOptions.RemoveEmptyEntries);
 				var xPos = int.Parse(splitLine[0]);
 				var yPos = int.Parse(splitLine[1]);
 				var tileVector = new Vector2(xPos, yPos);
@@ -133,6 +136,23 @@ namespace Assets.Scripts
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
 							break;
 						}
+					case 4:
+						{
+							newGameObject = Instantiate(ButtonBase);
+							newGameObjectClass = newGameObject.GetComponent<Button>();
+							for (int i = 5; i < splitLine.Length; i += 2)
+							{
+								var childX = int.Parse(splitLine[i]);
+								var childY = int.Parse(splitLine[i+1]);
+								var searchVector = new Vector2(childX, childY);
+								Collidable result;
+								this._collidableList.TryGetValue(searchVector, out result);
+								var switchClass = (Switch)newGameObjectClass;
+								switchClass.AddToChildToggleObjectList((ScreenEntity)result);
+                            }
+							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
+							break;
+						}
 					case 6:
 						{
 							newGameObject = Instantiate(TileBase);
@@ -142,6 +162,7 @@ namespace Assets.Scripts
 							break;
 						}
 				}
+				this._collidableList.Add(new KeyValuePair<Vector2, Collidable>(tileVector, newGameObjectClass));
 			}
 
 			fileReader.Close();

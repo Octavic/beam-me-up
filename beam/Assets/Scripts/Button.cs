@@ -7,5 +7,10 @@ namespace Assets.Scripts
 {
 	public class Button:Switch
 	{
+		// Constructor
+		public void Initialize()
+		{
+			this._childToggleObjectList = new List<ScreenEntity>();
+		}
 	}
 }

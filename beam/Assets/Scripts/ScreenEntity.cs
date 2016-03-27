@@ -8,25 +8,30 @@ namespace Assets.Scripts
 {
 	public abstract class ScreenEntity : Collidable
 	{
-		// Constructor
-		public ScreenEntity()
-		{
-
-		}
-
 		// The toggle state
-		private bool _isToggled;
+		public bool IsToggledAndActive { get; set; }
+
+		// The sprite
+		protected Sprite _sprite;
+
+		void Start()
+		{
+			this.IsToggledAndActive = true;
+			this._sprite = this.GetComponent<SpriteRenderer>().sprite;
+		}
 
 		// Toggle the entity
 		public void Toggle()
 		{
-			this._isToggled = !this._isToggled;
-		}
-
-		// Return the toggle state
-		public bool IsToggled()
-		{
-			return this._isToggled;
+			this.IsToggledAndActive = !this.IsToggledAndActive;
+			if (this.IsToggledAndActive)
+			{
+				this.GetComponent<SpriteRenderer>().sprite = _sprite;
+			}
+			else
+			{
+				this.GetComponent<SpriteRenderer>().sprite = null;
+			}
 		}
 	}
 }

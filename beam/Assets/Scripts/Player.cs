@@ -72,10 +72,6 @@ namespace Assets.Scripts
 				{
 					UpdateVelocityY(VerticalForce);
 				}
-				if (this._jumpFramesHeld >= 5)
-				{
-					int i = 0;
-				}
 			}
 			else
 			{
@@ -160,11 +156,6 @@ namespace Assets.Scripts
 			{
 				beam.UpdateBeam(this.transform.position);
 			}
-		}
-
-		public override void Toggle()
-		{
-			throw new NotImplementedException();
 		}
 	}
 }

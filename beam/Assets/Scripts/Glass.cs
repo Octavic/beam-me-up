@@ -7,9 +7,5 @@ namespace Assets.Scripts
 {
 	public class Glass : SolidEntity
 	{
-		public override void Toggle()
-		{
-			throw new NotImplementedException();
-		}
 	}
 }

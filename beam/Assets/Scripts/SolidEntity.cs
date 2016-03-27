@@ -8,29 +8,14 @@ namespace Assets.Scripts
 {
 	public abstract class SolidEntity : ScreenEntity
 	{
-		// If the entity is toggled on or off
-		[HideInInspector]
-		public bool IsToggledAndActive
-		{
-			get; set;
-		}
-
-		// Set the toggle state
-		public void SetToggleState(bool state)
-		{
-			this.IsToggledAndActive = state;
-		}
-		// Toggle the toggle state
-		public abstract void Toggle();
-
 		// When an item collides against it
 		void OnTriggerEnter2D(Collider2D sender)
 		{
 			// If inactive, don't return anything
-			//if (!IsToggledAndActive)
-			//{
-			//	return;
-			//}
+			if (!this.IsToggledAndActive)
+			{
+				return;
+			}
 			// Get the tag of the sender
 			var senderTag = sender.tag;
 			// Get the corresponding sender class
@@ -61,7 +46,7 @@ namespace Assets.Scripts
 			{
 				// Vertical collision
 				senderClass.ResetVelocityY();
-				senderClass.MoveTo(new Vector2(senderX, this.transform.position.y + (offsetY > 0 ? 0.31f : -0.31f)));
+				senderClass.MoveTo(new Vector2(senderX, this.transform.position.y + (offsetY > 0 ? 0.31f : -0.33f)));
 				if (senderClass is Player)
 				{
 					Player p = (Player)senderClass;
@@ -71,7 +56,7 @@ namespace Assets.Scripts
 			else
 			{
 				senderClass.ResetVelocityX();
-				senderClass.MoveTo(new Vector2(this.transform.position.x + (offsetX > 0 ? 0.31f : -0.31f), senderY));
+				senderClass.MoveTo(new Vector2(this.transform.position.x + (offsetX > 0 ? 0.33f : -0.33f), senderY));
 			}
 		}
 		// When the collider stays
