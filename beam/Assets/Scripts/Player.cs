@@ -8,6 +8,15 @@ namespace Assets.Scripts
 {
 	public class Player : MovableEntity
 	{
+		// List of possible player states
+		public enum PlayerState
+		{
+			Idle,
+			Opening,
+			OpenedIdle,
+			Closing
+		}
+
 		// Forces
 		public float VerticalForce;
 		public float HorizontalForce;
