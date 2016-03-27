@@ -27,10 +27,18 @@ namespace Assets.Scripts
 		// The title of the level
 		private string _levelTitle;
 
+		// Wait
+		IEnumerator WaitForS(int i)
+		{
+			yield return new WaitForSeconds(i);
+		}
+
+
 		// Reset the level
 		public void ResetLevel()
 		{
-
+			StartCoroutine( WaitForS(100));
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 		}
 
 		// Generate the level based on the given file

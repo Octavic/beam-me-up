@@ -19,7 +19,7 @@ namespace Assets.Scripts
 			var senderTag = sender.tag;
 			if (senderTag == "Player" || senderTag == "Weight")
 			{
-
+				GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().ResetLevel();
 			}
 		}
     }

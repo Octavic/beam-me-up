@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Weight.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Levels\Backups with sensors\level8.txt" />
     <None Include="Assets\Levels\Test.txt" />
     <None Include="Assets\Levels\example.txt" />
     <None Include="Assets\Levels\format for levels.txt" />
