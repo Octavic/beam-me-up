@@ -92,11 +92,13 @@ namespace Assets.Scripts
 					if (_direction == Direction.Up)
 					{
 						this.transform.Translate(new Vector3(0, -distance / 2, 0));
+
 					}
 					else if (_direction == Direction.Down)
 					{
 						this.transform.Translate(new Vector3(0, distance / 2, 0));
-					}
+                        this.transform.Rotate(new Vector3(0, 0, 90));
+                    }
 					else if (_direction == Direction.Left)
 					{
 						this.transform.Translate(new Vector3(-distance / 2, 0, 0));
@@ -104,7 +106,8 @@ namespace Assets.Scripts
 					else
 					{
 						this.transform.Translate(new Vector3(distance / 2, 0, 0));
-					}
+                        this.transform.Rotate(new Vector3(0, 0, 90));
+                    }
 
 					this.transform.localScale = new Vector3(transform.localScale.x, distance, transform.localScale.z);
 				}

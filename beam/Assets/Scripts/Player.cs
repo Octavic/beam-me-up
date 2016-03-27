@@ -108,21 +108,21 @@ namespace Assets.Scripts
 				newBeamClass.InitializeBeam(BeamSegment.Direction.Down);
 				this._beamList.Add(newBeamClass);
 
-				// Add the left beam
-				newBeam = Instantiate(BeamBase);
+                // Add the left beam
+                newBeam = Instantiate(BeamBase);
 				newBeam.AddComponent<BeamSegment>();
 				newBeamClass = newBeam.GetComponent<BeamSegment>();
 				newBeamClass.InitializeBeam(BeamSegment.Direction.Left);
 				this._beamList.Add(newBeamClass);
 
-				// Add the right beam
-				newBeam = Instantiate(BeamBase);
+                // Add the right beam
+                newBeam = Instantiate(BeamBase);
 				newBeam.AddComponent<BeamSegment>();
 				newBeamClass = newBeam.GetComponent<BeamSegment>();
 				newBeamClass.InitializeBeam(BeamSegment.Direction.Right);
 				this._beamList.Add(newBeamClass);
 
-			}
+            }
 
 			foreach (var beam in this._beamList)
 			{
