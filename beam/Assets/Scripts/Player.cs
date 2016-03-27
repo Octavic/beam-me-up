@@ -71,6 +71,10 @@ namespace Assets.Scripts
 				{
 					UpdateVelocityY(VerticalForce);
 				}
+				if (this._jumpFramesHeld >= 5)
+				{
+					int i = 0;
+				}
 			}
 			else
 			{
@@ -103,34 +107,36 @@ namespace Assets.Scripts
 			// Emit the beam if the key is pressed
 			if (Input.GetKey(Fire))
 			{
-				// Add the upwards beam
-				var newBeam = Instantiate(BeamBase);
-				newBeam.AddComponent<BeamSegment>();
-				var newBeamClass = newBeam.GetComponent<BeamSegment>();
-				newBeamClass.InitializeBeam(BeamSegment.Direction.Up);
-				this._beamList.Add(newBeamClass);
+				if (this._beamList.Count == 0)
+				{
+					// Add the upwards beam
+					var newBeam = Instantiate(BeamBase);
+					newBeam.AddComponent<BeamSegment>();
+					var newBeamClass = newBeam.GetComponent<BeamSegment>();
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Up);
+					this._beamList.Add(newBeamClass);
 
-				// Add the downwards beam
-				newBeam = Instantiate(BeamBase);
-				newBeam.AddComponent<BeamSegment>();
-				newBeamClass = newBeam.GetComponent<BeamSegment>();
-				newBeamClass.InitializeBeam(BeamSegment.Direction.Down);
-				this._beamList.Add(newBeamClass);
+					// Add the downwards beam
+					newBeam = Instantiate(BeamBase);
+					newBeam.AddComponent<BeamSegment>();
+					newBeamClass = newBeam.GetComponent<BeamSegment>();
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Down);
+					this._beamList.Add(newBeamClass);
 
-                // Add the left beam
-                newBeam = Instantiate(BeamBase);
-				newBeam.AddComponent<BeamSegment>();
-				newBeamClass = newBeam.GetComponent<BeamSegment>();
-				newBeamClass.InitializeBeam(BeamSegment.Direction.Left);
-				this._beamList.Add(newBeamClass);
+					// Add the left beam
+					newBeam = Instantiate(BeamBase);
+					newBeam.AddComponent<BeamSegment>();
+					newBeamClass = newBeam.GetComponent<BeamSegment>();
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Left);
+					this._beamList.Add(newBeamClass);
 
-                // Add the right beam
-                newBeam = Instantiate(BeamBase);
-				newBeam.AddComponent<BeamSegment>();
-				newBeamClass = newBeam.GetComponent<BeamSegment>();
-				newBeamClass.InitializeBeam(BeamSegment.Direction.Right);
-				this._beamList.Add(newBeamClass);
-
+					// Add the right beam
+					newBeam = Instantiate(BeamBase);
+					newBeam.AddComponent<BeamSegment>();
+					newBeamClass = newBeam.GetComponent<BeamSegment>();
+					newBeamClass.InitializeBeam(BeamSegment.Direction.Right);
+					this._beamList.Add(newBeamClass);
+				}
             }
 
 			foreach (var beam in this._beamList)

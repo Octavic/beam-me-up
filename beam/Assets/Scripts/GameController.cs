@@ -92,7 +92,7 @@ namespace Assets.Scripts
 							newGameObject.AddComponent<Block>();
 							newGameObjectClass = newGameObject.GetComponent<Block>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
-							
+							newGameObject.tag = "Solid";
                             break;
 						}
 					case 2:
@@ -101,6 +101,7 @@ namespace Assets.Scripts
 							newGameObject.AddComponent<Glass>();
 							newGameObjectClass = newGameObject.GetComponent<Glass>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
+							newGameObject.tag = "Transparent";
 							break;
 						}
 					case 3:
