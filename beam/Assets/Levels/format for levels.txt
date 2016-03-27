@@ -1,0 +1,7 @@
+Name of level here
+Player 1 location in x,y
+Player 2 location in x,y
+Location of boxes in x,y
+--------------------------------------
+x, y blockID:SkinID:CurrentToggleState
+
