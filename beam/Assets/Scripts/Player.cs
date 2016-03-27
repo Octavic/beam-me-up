@@ -13,6 +13,8 @@ namespace Assets.Scripts
 		public float HorizontalForce;
 		// Max movement speed
 		public float MaxHorizontalMovementSpeed;
+		// Max jump frames
+		public int MaxJumpFrames;
 		// Friction
 		public float HorizontalFriction;
 
@@ -33,6 +35,9 @@ namespace Assets.Scripts
 		// List of beams shot out from the player
 		private IList<BeamSegment> _beamList;
 
+		// How many frames have passed in the previous jump
+		private int _jumpFramesHeld;
+
 		// Initialize
 		void Start()
 		{
@@ -41,12 +46,29 @@ namespace Assets.Scripts
 			this.IsAffectedByGravity = true;
 		}
 
+		// Reset the jump frames
+		public void ResetJumpFrames()
+		{
+			this._jumpFramesHeld = 0;
+		}
+
 		// Update
 		void Update()
 		{
 			if (Input.GetKey(Up))
 			{
-				UpdateVelocityY(VerticalForce);
+				this._jumpFramesHeld++;
+				if (this._jumpFramesHeld < MaxJumpFrames)
+				{
+					UpdateVelocityY(VerticalForce);
+				}
+			}
+			else
+			{
+				if (this._jumpFramesHeld > 0)
+				{
+					this._jumpFramesHeld += MaxJumpFrames;
+				}
 			}
 			if (Input.GetKey(Down))
 			{

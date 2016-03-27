@@ -62,6 +62,11 @@ namespace Assets.Scripts
 				// Vertical collision
 				senderClass.ResetVelocityY();
 				senderClass.MoveTo(new Vector2(senderX, this.transform.position.y + (offsetY > 0 ? 0.31f : -0.31f)));
+				if (senderClass is Player)
+				{
+					Player p = (Player)senderClass;
+					p.ResetJumpFrames();
+				}
 			}
 			else
 			{

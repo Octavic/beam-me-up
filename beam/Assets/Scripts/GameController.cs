@@ -14,8 +14,12 @@ namespace Assets.Scripts
 		public List<Sprite> SpriteList;
 
 		// The players
-		public GameObject _player1;
-		public GameObject _player2;
+		public GameObject Player1;
+		public GameObject Player2;
+
+		// The spikes
+		public GameObject HorizontalSpikes;
+		public GameObject VerticalSpikes;
 
 		// A list of all collidables on the screen
 		private IDictionary<Vector2, Collidable> _collidableList;
@@ -30,7 +34,7 @@ namespace Assets.Scripts
 			this._collidableList = new Dictionary<Vector2, Collidable>();
 
 			// The position of the first sprite of the given entity
-			var spritePosition = new List<int>() {0,0,5,8,10,13,17};
+			var spritePosition = new List<int>() {-1,0,12,9,5,7,17};
 
 			// Get the stream reader for the file
 			var fileReader = new StreamReader(File.OpenRead(levelDataPath));
@@ -77,13 +81,14 @@ namespace Assets.Scripts
 				var spriteID = spritePosition[entityID] + int.Parse(splitLine[3]);
 
 				// The copied new game object
-				var newGameObject = Instantiate(TileBase);
+				GameObject newGameObject = null;
 				Collidable newGameObjectClass = null;
 
 				switch (entityID)
 				{
 					case 1:
 						{
+							newGameObject = Instantiate(TileBase);
 							newGameObject.AddComponent<Block>();
 							newGameObjectClass = newGameObject.GetComponent<Block>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
@@ -92,6 +97,7 @@ namespace Assets.Scripts
 						}
 					case 2:
 						{
+							newGameObject = Instantiate(TileBase);
 							newGameObject.AddComponent<Glass>();
 							newGameObjectClass = newGameObject.GetComponent<Glass>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
@@ -99,6 +105,14 @@ namespace Assets.Scripts
 						}
 					case 3:
 						{
+							if (spriteID == 9)
+							{
+								newGameObject = Instantiate(HorizontalSpikes);
+							}
+							else
+							{
+								newGameObject = Instantiate(VerticalSpikes);
+							}
 							newGameObject.AddComponent<Spike>();
 							newGameObjectClass = newGameObject.GetComponent<Spike>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);
@@ -106,6 +120,7 @@ namespace Assets.Scripts
 						}
 					case 6:
 						{
+							newGameObject = Instantiate(TileBase);
 							newGameObject.AddComponent<EndZone>();
 							newGameObjectClass = newGameObject.GetComponent<EndZone>();
 							newGameObjectClass.Initialize(tileVector, this.SpriteList[spriteID]);

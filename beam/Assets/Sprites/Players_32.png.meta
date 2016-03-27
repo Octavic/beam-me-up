@@ -1,0 +1,1187 @@
+fileFormatVersion: 2
+guid: 344afdb8451930044978cb247f482a92
+timeCreated: 1459063729
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Players_32_0
+    21300002: Players_32_1
+    21300004: Players_32_2
+    21300006: Players_32_3
+    21300008: Players_32_4
+    21300010: Players_32_5
+    21300012: Players_32_6
+    21300014: Players_32_7
+    21300016: Players_32_8
+    21300018: Players_32_9
+    21300020: Players_32_10
+    21300022: Players_32_11
+    21300024: Players_32_12
+    21300026: Players_32_13
+    21300028: Players_32_14
+    21300030: Players_32_15
+    21300032: Players_32_16
+    21300034: Players_32_17
+    21300036: Players_32_18
+    21300038: Players_32_19
+    21300040: Players_32_20
+    21300042: Players_32_21
+    21300044: Players_32_22
+    21300046: Players_32_23
+    21300048: Players_32_24
+    21300050: Players_32_25
+    21300052: Players_32_26
+    21300054: Players_32_27
+    21300056: Players_32_28
+    21300058: Players_32_29
+    21300060: Players_32_30
+    21300062: Players_32_31
+    21300064: Players_32_32
+    21300066: Players_32_33
+    21300068: Players_32_34
+    21300070: Players_32_35
+    21300072: Players_32_36
+    21300074: Players_32_37
+    21300076: Players_32_38
+    21300078: Players_32_39
+    21300080: Players_32_40
+    21300082: Players_32_41
+    21300084: Players_32_42
+    21300086: Players_32_43
+    21300088: Players_32_44
+    21300090: Players_32_45
+    21300092: Players_32_46
+    21300094: Players_32_47
+    21300096: Players_32_48
+    21300098: Players_32_49
+    21300100: Players_32_50
+    21300102: Players_32_51
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Players_32_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 13}
+        - {x: 5, y: 14}
+        - {x: -7, y: 14}
+        - {x: -16, y: 10}
+        - {x: -16, y: -13}
+        - {x: -10, y: -16}
+        - {x: 7, y: -16}
+        - {x: 14, y: -10}
+        - {x: 15, y: -5}
+        - {x: 15, y: 5}
+    - name: Players_32_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -16, y: 15}
+        - {x: -16, y: -11}
+        - {x: -9, y: -14}
+        - {x: -4, y: -15}
+        - {x: 5, y: -15}
+        - {x: 14, y: -8}
+        - {x: 15, y: -3}
+        - {x: 15, y: 10}
+    - name: Players_32_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -10}
+        - {x: -11, y: -14}
+        - {x: 6, y: -14}
+        - {x: 15, y: -10}
+        - {x: 15, y: 11}
+        - {x: 13, y: 16}
+    - name: Players_32_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 12}
+        - {x: 10, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -11}
+        - {x: -8, y: -13}
+        - {x: 8, y: -13}
+        - {x: 14, y: -6}
+        - {x: 15, y: -3}
+        - {x: 15, y: 6}
+    - name: Players_32_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -10}
+        - {x: -11, y: -14}
+        - {x: 6, y: -14}
+        - {x: 15, y: -10}
+        - {x: 15, y: 11}
+        - {x: 13, y: 16}
+    - name: Players_32_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -16, y: 15}
+        - {x: -16, y: -11}
+        - {x: -9, y: -14}
+        - {x: -4, y: -15}
+        - {x: 5, y: -15}
+        - {x: 14, y: -8}
+        - {x: 15, y: -3}
+        - {x: 15, y: 10}
+    - name: Players_32_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 13}
+        - {x: 5, y: 14}
+        - {x: -7, y: 14}
+        - {x: -16, y: 10}
+        - {x: -16, y: -13}
+        - {x: -10, y: -16}
+        - {x: 7, y: -16}
+        - {x: 14, y: -10}
+        - {x: 15, y: -5}
+        - {x: 15, y: 5}
+    - name: Players_32_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -16, y: 15}
+        - {x: -16, y: -11}
+        - {x: -9, y: -14}
+        - {x: -4, y: -15}
+        - {x: 5, y: -15}
+        - {x: 14, y: -8}
+        - {x: 15, y: -3}
+        - {x: 15, y: 10}
+    - name: Players_32_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -10}
+        - {x: -11, y: -14}
+        - {x: 6, y: -14}
+        - {x: 15, y: -10}
+        - {x: 15, y: 11}
+        - {x: 13, y: 16}
+    - name: Players_32_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 12}
+        - {x: 10, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -11}
+        - {x: -8, y: -13}
+        - {x: 8, y: -13}
+        - {x: 14, y: -6}
+        - {x: 15, y: -3}
+        - {x: 15, y: 6}
+    - name: Players_32_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -10}
+        - {x: -11, y: -14}
+        - {x: 6, y: -14}
+        - {x: 15, y: -10}
+        - {x: 15, y: 11}
+        - {x: 13, y: 16}
+    - name: Players_32_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -16, y: 15}
+        - {x: -16, y: -11}
+        - {x: -9, y: -14}
+        - {x: -4, y: -15}
+        - {x: 5, y: -15}
+        - {x: 14, y: -8}
+        - {x: 15, y: -3}
+        - {x: 15, y: 10}
+    - name: Players_32_33
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_37
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_44
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_46
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_48
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    - name: Players_32_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -9, y: -15}
+        - {x: -4, y: -16}
+        - {x: 5, y: -16}
+        - {x: 14, y: -9}
+        - {x: 15, y: -4}
+        - {x: 15, y: 9}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
